@@ -4,8 +4,7 @@ body {
 
 .animationImg {
     width: 100%;
-    height: auto;
-    overflow: hidden;
+    height: auto;    
 }
 
 #slideIn {     

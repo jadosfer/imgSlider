@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>      
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">          
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="backgroundRotation.js"></script>
+
+
+</head>
+<body onload="changeimage(8)">
+    <nav class="navbar navbar-expand-sm bg-dark fixed-top navbar-dark"> <!--fixed-top-->
+        <a class="navbar-brand" href="#">
+            Vuela Viajes
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mynav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mynav">
+            <ul class="navbar-nav mr-auto">    
+                <li class="nav-item" *ngIf="loginService.currentUserName != null">
+                    <a class="nav-link" [routerLink]="['/admin', 'masters']">Paquetes</a>
+                </li>
+                <li class="nav-item" *ngIf="loginService.currentUserName != null">
+                    <a class="nav-link" href="#" (click)="loginService.Logout()">Promociones</a>
+                </li>           
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['about']">Contacto</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="search"><i class="fa fa-search"></i></span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Search">
+                </div>
+                <button class="btn btn-danger my2- my-sm-0" type="button" (click)="onSearchClick()">Search</button>
+            </form>
+        </div>
+    </nav>            
+    <img id="slideIn" class="animationImg" src="assets/images/buda1.jpg">
+    <img id="slideOut" class="animationImg" src="assets/images/marMontania5.jpg">               
+    
+
+    <!--<img id="buda" class="animationImg" src="assets/images/buda1.jpg">               
+    <img id="chamanes" class="animationImg" src="assets/images/tresChamanes2.jpg">
+    <img id="pescador" class="animationImg" src="assets/images/pescador3.jpg">               
+    <img id="fuego" class="animationImg" src="assets/images/fuego4.jpg">            
+    <img id="montania" class="animationImg" src="assets/images/marMontania5.jpg">-->
+</body>
+</html>

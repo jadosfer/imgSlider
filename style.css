@@ -1,0 +1,75 @@
+body {
+    background-color: black;
+}
+
+.animationImg {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+#slideIn {     
+    animation-name: moveIn;  
+    animation-duration: 8s;        
+    animation-iteration-count: infinite;     
+}
+
+#slideOut { 
+    animation-name: moveOut; 
+    animation-duration: 8s;        
+    animation-iteration-count: infinite;         
+}
+
+
+@keyframes moveIn {
+    0% {
+        visibility: hidden;
+        margin-bottom: -150%;
+        visibility: visible;         
+    }  
+    50% {
+        margin-bottom: -0%;          
+        }
+    100% {
+        margin-bottom: -0%;          
+        }
+    }      
+
+@keyframes moveOut {
+0% {
+    margin-top: 0%;
+    opacity: 1;
+}
+40% {          
+    opacity: 0;
+    }
+50% {
+    margin-top: -150%;    
+    opacity: 0;
+    }
+100% {
+    margin-top: -150%;   
+    opacity: 0; 
+    }
+}
+
+body2 {
+    /* Ubicación de la imagen */    
+    background-image: url(assets/images/buda1.png);
+    
+    /* Para dejar la imagen de fondo centrada, vertical y horizontalmente */    
+    background-position: center center;
+    
+    /* Para que la imagen de fondo no se repita */    
+    background-repeat: no-repeat;
+    
+    /* La imagen se fija en la ventana de visualización para que la altura de la imagen no supere a la del contenido */    
+    background-attachment: fixed;
+    
+    /* La imagen de fondo se reescala automáticamente con el cambio del ancho de ventana del navegador */    
+    background-size: cover;
+    
+    /* Se muestra un color de fondo mientras se está cargando la imagen de fondo o si hay problemas para cargarla */    
+    background-color: black;    
+    }
+
